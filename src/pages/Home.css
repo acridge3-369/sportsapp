@@ -2,13 +2,26 @@
   padding: 32px 0;
 }
 
-.home-header {
-  margin-bottom: 32px;
+.app-title {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.home-header h1 {
-  font-size: 32px;
-  font-weight: 700;
+.app-title h1 {
+  font-size: 56px;
+  font-weight: 300;
+  color: var(--text-primary);
+  letter-spacing: -1px;
+}
+
+.home-header {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.home-header h2 {
+  font-size: 28px;
+  font-weight: 300;
   color: var(--text-primary);
   margin-bottom: 8px;
 }
@@ -16,6 +29,7 @@
 .home-header p {
   font-size: 16px;
   color: var(--text-secondary);
+  font-weight: 300;
 }
 
 .upgrade-banner {
@@ -23,11 +37,9 @@
   align-items: center;
   gap: 16px;
   padding: 20px 24px;
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-  border-radius: 16px;
-  color: white;
+  background: transparent;
+  color: var(--text-primary);
   margin-bottom: 32px;
-  box-shadow: var(--shadow-lg);
 }
 
 .upgrade-banner svg {
@@ -51,17 +63,15 @@
 
 .upgrade-btn {
   padding: 10px 24px;
-  background: white;
+  background: transparent;
   color: var(--primary);
-  border-radius: 12px;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 14px;
-  transition: transform 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .upgrade-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  color: var(--primary-dark);
 }
 
 .posts-container {
@@ -71,24 +81,20 @@
 }
 
 .post-card {
-  background: var(--surface);
-  border-radius: 20px;
+  background: transparent;
   overflow: hidden;
-  box-shadow: var(--shadow-md);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 .post-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  opacity: 0.8;
 }
 
 .post-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 20px;
-  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
 }
 
 .post-user {
@@ -101,7 +107,7 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: var(--primary);
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,7 +115,7 @@
 }
 
 .post-name {
-  font-weight: 600;
+  font-weight: 400;
   color: var(--text-primary);
   font-size: 15px;
 }
@@ -121,11 +127,10 @@
 
 .post-sport-badge {
   padding: 6px 14px;
-  background: var(--background);
-  border-radius: 20px;
+  background: transparent;
   font-size: 13px;
-  font-weight: 600;
-  color: var(--primary);
+  font-weight: 300;
+  color: var(--text-secondary);
 }
 
 .post-content {
@@ -134,16 +139,34 @@
 
 .post-video {
   position: relative;
-  width: 100%;
+  width: 70%;
+  max-width: 600px;
   aspect-ratio: 16/9;
-  background: var(--background);
-  overflow: hidden;
+  background: transparent;
+  overflow: visible;
+  margin: 0 auto;
+  border-radius: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), 0 0 0 8px rgba(255, 255, 255, 0.3);
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .post-video img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+  border-radius: 40px;
+}
+
+.post-video .video-player {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  background: transparent;
+  border-radius: 40px;
 }
 
 .play-overlay {
@@ -168,12 +191,12 @@
 }
 
 .post-info {
-  padding: 16px 20px;
+  padding: 16px 0;
 }
 
 .post-info h3 {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--text-primary);
   margin-bottom: 6px;
 }
@@ -187,11 +210,11 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 14px 20px;
-  background: linear-gradient(135deg, var(--success), #059669);
-  color: white;
+  padding: 14px 0;
+  background: transparent;
+  color: var(--success);
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 .coach-feedback-badge span {
@@ -200,23 +223,22 @@
 
 .view-feedback {
   padding: 6px 16px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-  font-weight: 600;
+  background: transparent;
+  font-weight: 400;
   font-size: 13px;
-  transition: background 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .view-feedback:hover {
-  background: rgba(255, 255, 255, 0.3);
+  color: var(--primary);
 }
 
 .coach-feedback-locked {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 14px 20px;
-  background: var(--background);
+  padding: 14px 0;
+  background: transparent;
   color: var(--text-secondary);
   font-size: 14px;
 }
@@ -225,30 +247,31 @@
   display: flex;
   align-items: center;
   gap: 24px;
-  padding: 16px 20px;
-  border-top: 1px solid var(--border);
+  padding: 16px 0;
 }
 
 .action-btn {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: none;
+  background: transparent;
   color: var(--text-secondary);
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 300;
   padding: 8px 12px;
-  border-radius: 10px;
   transition: all 0.2s ease;
 }
 
 .action-btn:hover {
-  background: var(--background);
   color: var(--primary);
 }
 
 @media (max-width: 768px) {
-  .home-header h1 {
+  .app-title h1 {
+    font-size: 40px;
+  }
+
+  .home-header h2 {
     font-size: 24px;
   }
 

@@ -11,8 +11,7 @@ function Navbar({ user }) {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-brand">
-          <div className="brand-icon">⚽</div>
-          <span className="brand-text">SkillUp Sports</span>
+          <span className="brand-text">Playbook</span>
         </Link>
 
         <div className="navbar-links">

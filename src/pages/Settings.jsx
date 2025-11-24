@@ -234,7 +234,7 @@ function Settings({ user, setUser }) {
                 <div>
                   <h4>Content Moderation</h4>
                   <p>
-                    All content on SkillUp Sports is heavily moderated to ensure a safe
+                    All content on Playbook is heavily moderated to ensure a safe
                     environment for children. Our team reviews all posts, comments, and
                     interactions to maintain sports-related content only.
                   </p>

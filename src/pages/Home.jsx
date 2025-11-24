@@ -10,7 +10,8 @@ function Home({ user }) {
       user: { name: 'Sarah M.', username: '@sarahm', avatar: '👧' },
       sport: 'Basketball',
       skill: 'Free Throw Technique',
-      videoUrl: 'https://via.placeholder.com/600x400/2563eb/ffffff?text=Basketball+Practice',
+      videoUrl: '/Recording 2025-11-24 105234.mp4',
+      isVideo: true,
       likes: 42,
       comments: 8,
       hasFeedback: true,
@@ -44,8 +45,11 @@ function Home({ user }) {
 
   return (
     <div className="home">
+      <div className="app-title">
+        <h1>Playbook</h1>
+      </div>
       <div className="home-header">
-        <h1>Your Feed</h1>
+        <h2>Your Feed</h2>
         <p>Watch and learn from other athletes</p>
       </div>
 
@@ -76,10 +80,23 @@ function Home({ user }) {
 
             <div className="post-content">
               <div className="post-video">
-                <img src={post.videoUrl} alt={post.skill} />
-                <div className="play-overlay">
-                  <Play size={48} fill="white" />
-                </div>
+                {post.isVideo ? (
+                  <video 
+                    src={post.videoUrl} 
+                    controls 
+                    className="video-player"
+                    poster="https://via.placeholder.com/600x400/2563eb/ffffff?text=Free+Throw+Practice"
+                  >
+                    Your browser does not support the video tag.
+                  </video>
+                ) : (
+                  <>
+                    <img src={post.videoUrl} alt={post.skill} />
+                    <div className="play-overlay">
+                      <Play size={48} fill="white" />
+                    </div>
+                  </>
+                )}
               </div>
               <div className="post-info">
                 <h3>{post.skill}</h3>
