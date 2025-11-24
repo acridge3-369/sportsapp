@@ -1,0 +1,314 @@
+.coach-feedback {
+  padding: 32px 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.feedback-locked {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 32px;
+}
+
+.locked-content {
+  text-align: center;
+  background: var(--surface);
+  padding: 48px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  max-width: 500px;
+}
+
+.locked-content svg {
+  color: var(--accent);
+  margin-bottom: 24px;
+}
+
+.locked-content h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.locked-content p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+}
+
+.upgrade-button {
+  padding: 14px 32px;
+  background: linear-gradient(135deg, var(--accent), #f97316);
+  color: white;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+
+.upgrade-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.feedback-header {
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.coach-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.coach-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.coach-info h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.coach-info p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.coach-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.verified-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--success);
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.feedback-content {
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+}
+
+.post-context {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid var(--border);
+}
+
+.post-context h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.sport-badge {
+  padding: 6px 14px;
+  background: var(--background);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.overall-rating {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+  background: var(--background);
+  border-radius: 16px;
+  margin-bottom: 32px;
+}
+
+.rating-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  flex-shrink: 0;
+}
+
+.rating-value {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.rating-out-of {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.overall-rating h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.overall-rating p {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.feedback-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.strengths-section,
+.improvements-section {
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.strengths-section {
+  background: rgba(16, 185, 129, 0.05);
+  border: 2px solid rgba(16, 185, 129, 0.2);
+}
+
+.improvements-section {
+  background: rgba(245, 158, 11, 0.05);
+  border: 2px solid rgba(245, 158, 11, 0.2);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.section-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.feedback-list {
+  list-style: none;
+}
+
+.feedback-list li {
+  padding: 10px 0;
+  padding-left: 24px;
+  position: relative;
+  color: var(--text-primary);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.strengths-section .feedback-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--success);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.improvements-section .feedback-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--warning);
+  font-weight: 700;
+}
+
+.coach-comments {
+  padding: 24px;
+  background: var(--background);
+  border-radius: 16px;
+  margin-bottom: 24px;
+}
+
+.coach-comments h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.coach-comments p {
+  font-size: 15px;
+  color: var(--text-primary);
+  line-height: 1.7;
+}
+
+.feedback-footer {
+  text-align: center;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.feedback-time {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .feedback-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .feedback-content {
+    padding: 24px;
+  }
+
+  .feedback-sections {
+    grid-template-columns: 1fr;
+  }
+
+  .overall-rating {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+

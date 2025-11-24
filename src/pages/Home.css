@@ -1,0 +1,268 @@
+.home {
+  padding: 32px 0;
+}
+
+.home-header {
+  margin-bottom: 32px;
+}
+
+.home-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.home-header p {
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+.upgrade-banner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 16px;
+  color: white;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow-lg);
+}
+
+.upgrade-banner svg {
+  flex-shrink: 0;
+}
+
+.upgrade-banner > div {
+  flex: 1;
+}
+
+.upgrade-banner strong {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.upgrade-banner p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.upgrade-btn {
+  padding: 10px 24px;
+  background: white;
+  color: var(--primary);
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: transform 0.2s ease;
+}
+
+.upgrade-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.post-card {
+  background: var(--surface);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.post-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.post-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.post-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 15px;
+}
+
+.post-username {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.post-sport-badge {
+  padding: 6px 14px;
+  background: var(--background);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.post-content {
+  position: relative;
+}
+
+.post-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: var(--background);
+  overflow: hidden;
+}
+
+.post-video img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.play-overlay:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.post-info {
+  padding: 16px 20px;
+}
+
+.post-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.post-time {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.coach-feedback-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, var(--success), #059669);
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.coach-feedback-badge span {
+  flex: 1;
+}
+
+.view-feedback {
+  padding: 6px 16px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  transition: background 0.2s ease;
+}
+
+.view-feedback:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.coach-feedback-locked {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  background: var(--background);
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.post-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 16px 20px;
+  border-top: 1px solid var(--border);
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+  background: var(--background);
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .home-header h1 {
+    font-size: 24px;
+  }
+
+  .upgrade-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .post-actions {
+    gap: 16px;
+  }
+
+  .action-btn span {
+    font-size: 13px;
+  }
+}
+
