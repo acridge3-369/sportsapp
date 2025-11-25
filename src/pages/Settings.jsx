@@ -1,9 +1,18 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { Crown, Shield, Lock, Bell, User, CreditCard, Check } from 'lucide-react'
 import './Settings.css'
 
 function Settings({ user, setUser }) {
+  const [searchParams] = useSearchParams()
   const [activeTab, setActiveTab] = useState('subscription')
+
+  useEffect(() => {
+    const tab = searchParams.get('tab')
+    if (tab) {
+      setActiveTab(tab)
+    }
+  }, [searchParams])
   const [parentalControls, setParentalControls] = useState({
     contentFiltering: true,
     timeLimits: false,

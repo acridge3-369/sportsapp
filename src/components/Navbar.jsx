@@ -39,9 +39,9 @@ function Navbar({ user }) {
 
         <div className="navbar-user">
           {!user.isSubscribed && (
-            <Link to="/settings" className="subscribe-badge">
-              <Crown size={16} />
-              <span>Upgrade</span>
+            <Link to="/settings?tab=subscription" className="premium-button">
+              <Crown size={18} />
+              <span>Go Premium</span>
             </Link>
           )}
           <div className="user-avatar">{user.avatar}</div>

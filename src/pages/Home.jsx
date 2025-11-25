@@ -136,6 +136,13 @@ function Home({ user }) {
           </div>
         ))}
       </div>
+
+      {!user.isSubscribed && (
+        <Link to="/settings?tab=subscription" className="floating-premium-btn">
+          <Crown size={20} />
+          <span>Go Premium</span>
+        </Link>
+      )}
     </div>
   )
 }

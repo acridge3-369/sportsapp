@@ -67,20 +67,24 @@
   flex-shrink: 0;
 }
 
-.subscribe-badge {
+.premium-button {
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 8px 16px;
-  background: transparent;
-  color: var(--accent);
-  font-size: 13px;
-  font-weight: 400;
+  gap: 8px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, var(--accent), #f97316);
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 25px;
   transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
 }
 
-.subscribe-badge:hover {
-  color: var(--primary);
+.premium-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(245, 158, 11, 0.4);
+  background: linear-gradient(135deg, #f97316, var(--accent));
 }
 
 .user-avatar {
@@ -113,7 +117,7 @@
     padding: 10px;
   }
 
-  .subscribe-badge span {
+  .premium-button span {
     display: none;
   }
 }
