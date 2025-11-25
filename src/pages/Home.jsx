@@ -105,18 +105,25 @@ function Home({ user }) {
             </div>
 
             {post.hasFeedback && user.isSubscribed && (
-              <div className="coach-feedback-badge">
-                <Shield size={16} />
-                <span>Feedback from {post.coach}</span>
-                <Link to={`/feedback/${post.id}`} className="view-feedback">View</Link>
-              </div>
+              <Link to={`/feedback/${post.id}`} className="coach-feedback-badge">
+                <Shield size={24} />
+                <div className="feedback-content">
+                  <strong>Coach Feedback Available</strong>
+                  <span>From {post.coach}</span>
+                </div>
+                <span className="view-arrow">View →</span>
+              </Link>
             )}
 
             {post.hasFeedback && !user.isSubscribed && (
-              <div className="coach-feedback-locked">
-                <Crown size={16} />
-                <span>Coach feedback available - Upgrade to view</span>
-              </div>
+              <Link to="/settings?tab=subscription" className="coach-feedback-locked">
+                <Crown size={24} />
+                <div className="locked-content">
+                  <strong>Premium Coach Feedback Available</strong>
+                  <span>Get expert analysis from certified coaches</span>
+                </div>
+                <span className="upgrade-arrow">→</span>
+              </Link>
             )}
 
             <div className="post-actions">
