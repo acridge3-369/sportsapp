@@ -46,7 +46,11 @@ function Home({ user }) {
   return (
     <div className="home">
       <div className="app-title">
-        <h1>Playbook</h1>
+        <div className="title-wrapper">
+          <h1 className="title-main">Playbook</h1>
+          <div className="title-accent"></div>
+        </div>
+        <p className="title-tagline">Elevate Your Game</p>
       </div>
       <div className="home-header">
         <h2>Your Feed</h2>

@@ -22,15 +22,24 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 18px;
-  font-weight: 400;
-  color: var(--text-primary);
+  font-size: 20px;
+  font-weight: 700;
   flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
 }
 
 .brand-text {
   white-space: nowrap;
-  font-weight: 400;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.5px;
 }
 
 .navbar-links {
