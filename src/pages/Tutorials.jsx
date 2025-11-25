@@ -1,9 +1,10 @@
 import { useState } from 'react'
-import { Play, Crown, Lock, Star, Users } from 'lucide-react'
+import { Play, Crown, Lock, Star, Users, X } from 'lucide-react'
 import './Tutorials.css'
 
 function Tutorials({ user }) {
   const [selectedSport, setSelectedSport] = useState('All')
+  const [playingVideo, setPlayingVideo] = useState(null)
 
   const sports = ['All', 'Basketball', 'Soccer', 'Tennis', 'Baseball', 'Volleyball']
 
@@ -28,7 +29,8 @@ function Tutorials({ user }) {
       views: '18.2K',
       rating: 4.8,
       thumbnail: 'https://via.placeholder.com/400x225/10b981/ffffff?text=Penalty+Kick+Tutorial',
-      isPremium: true
+      isPremium: true,
+      youtubeId: '-ZhP77I3ftk'
     },
     {
       id: 3,
@@ -116,7 +118,15 @@ function Tutorials({ user }) {
                 <span>Premium</span>
               </div>
             )}
-            <div className="tutorial-thumbnail">
+            <div 
+              className={`tutorial-thumbnail ${tutorial.isPremium && !user.isSubscribed ? 'locked' : ''}`}
+              onClick={() => {
+                if (tutorial.isPremium && !user.isSubscribed) return
+                if (tutorial.youtubeId) {
+                  setPlayingVideo(tutorial.youtubeId)
+                }
+              }}
+            >
               <img src={tutorial.thumbnail} alt={tutorial.title} />
               <div className="play-button">
                 <Play size={32} fill="white" />
@@ -145,6 +155,25 @@ function Tutorials({ user }) {
           </div>
         ))}
       </div>
+
+      {playingVideo && (
+        <div className="video-modal" onClick={() => setPlayingVideo(null)}>
+          <div className="video-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="close-video-btn" onClick={() => setPlayingVideo(null)}>
+              <X size={24} />
+            </button>
+            <iframe
+              width="100%"
+              height="100%"
+              src={`https://www.youtube.com/embed/${playingVideo}?autoplay=1`}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
