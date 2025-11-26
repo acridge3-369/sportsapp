@@ -47,7 +47,7 @@ function Home({ user }) {
     <div className="home">
       <div className="app-title">
         <div className="title-wrapper">
-          <h1 className="title-main">Playbook</h1>
+          <h1 className="title-main">ClipCoach</h1>
           <div className="title-accent"></div>
         </div>
         <p className="title-tagline">Elevate Your Game</p>
